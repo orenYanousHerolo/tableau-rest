@@ -1,0 +1,5 @@
+/node_modules
+/.vscode/*
+src/.vscode/launch.json
+/src/.env
+ngrok.exe

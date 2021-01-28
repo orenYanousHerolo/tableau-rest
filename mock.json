@@ -1,0 +1,38 @@
+[
+  {
+    "Id": 1,
+    "Name": "test1",
+    "Revenue": 2000,
+    "Cost": 100,
+    "Category": ["desert", "food", "yogurt"],
+    "Visits":[
+      {
+        "day":"Mon",
+        "visit_count": 300
+      },
+      {
+        "day":"Tue",
+        "visit_count": 100
+      }
+    ],
+    "City": "Tucson"
+  },
+  {
+    "Id": 2,
+    "Name": "test2",
+    "Revenue": 4000,
+    "Cost": 200,
+    "Category": ["desert2", "food2", "yogurt2"],
+    "Visits":[
+      {
+        "day":"Sun",
+        "visit_count": 200
+      },
+      {
+        "day":"Sat",
+        "visit_count": 120
+      }
+    ],
+    "City": "Texsas"
+  }
+]
