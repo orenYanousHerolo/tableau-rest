@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "59ab8336-e5c8-435f-a676-3f3b87bc5d26",
+		"name": "Tableau",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SignIn API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"credentials\": {\r\n        \"personalAccessTokenName\": \"api-token\",\r\n        \"personalAccessTokenSecret\": \"nKwUKv4vRqqKcbaOwVuVzg==:3nuCMA2nE3aBI7xJEovwv3JEZWnfGOhZ\",\r\n        \"site\": {\r\n            \"contentUrl\": \"herolopoc\"\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dub01.online.tableau.com/api/3.9/auth/signin",
+					"protocol": "https",
+					"host": [
+						"dub01",
+						"online",
+						"tableau",
+						"com"
+					],
+					"path": [
+						"api",
+						"3.9",
+						"auth",
+						"signin"
+					]
+				},
+				"description": "https://dub01.online.tableau.com/api/3.9/auth/signin"
+			},
+			"response": []
+		},
+		{
+			"name": "Query views by view-id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Tableau-Auth",
+						"value": "QO_p3f_RRXCBRPeYXmT3Wg|L5mn9DY7ShUJQ2XNkXfrr4tpdXEI7R4W",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dub01.online.tableau.com/api/3.9/sites/2cf921cf-50a3-4e5a-9eda-faa35bb153f6/views/3fc4f739-9afd-467b-9faa-8f3ff66c570a",
+					"protocol": "https",
+					"host": [
+						"dub01",
+						"online",
+						"tableau",
+						"com"
+					],
+					"path": [
+						"api",
+						"3.9",
+						"sites",
+						"2cf921cf-50a3-4e5a-9eda-faa35bb153f6",
+						"views",
+						"3fc4f739-9afd-467b-9faa-8f3ff66c570a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query views by view-id Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Tableau-Auth",
+						"value": "OKyKbzRSRXq13evcLgJQ8g|cCHNP3SrpHJqO03ROmUtVWwqeDQcpxWy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dub01.online.tableau.com/api/3.9/sites/2cf921cf-50a3-4e5a-9eda-faa35bb153f6/views/3fc4f739-9afd-467b-9faa-8f3ff66c570a",
+					"protocol": "https",
+					"host": [
+						"dub01",
+						"online",
+						"tableau",
+						"com"
+					],
+					"path": [
+						"api",
+						"3.9",
+						"sites",
+						"2cf921cf-50a3-4e5a-9eda-faa35bb153f6",
+						"views",
+						"3fc4f739-9afd-467b-9faa-8f3ff66c570a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Users permissions by view",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Tableau-Auth",
+						"value": "m-1hFfbLS3C7S9JeTQLP4A|YSArTUK7egxkbvydLbmPpVWvBWLsXyKK",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dub01.online.tableau.com/api/3.9/sites/2cf921cf-50a3-4e5a-9eda-faa35bb153f6/workbooks/345eda24-cdb2-4bdf-8b92-768fdd9ae9a5/permissions",
+					"protocol": "https",
+					"host": [
+						"dub01",
+						"online",
+						"tableau",
+						"com"
+					],
+					"path": [
+						"api",
+						"3.9",
+						"sites",
+						"2cf921cf-50a3-4e5a-9eda-faa35bb153f6",
+						"workbooks",
+						"345eda24-cdb2-4bdf-8b92-768fdd9ae9a5",
+						"permissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set permissions to view",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Tableau-Auth",
+						"value": "QO_p3f_RRXCBRPeYXmT3Wg|L5mn9DY7ShUJQ2XNkXfrr4tpdXEI7R4W",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<tsRequest>\r\n    <permissions>\r\n        <view id=\"3fc4f739-9afd-467b-9faa-8f3ff66c570a\" />\r\n        <granteeCapabilities>\r\n            <user id=\"8f6aec1c-381c-4aeb-ad18-5253e4e32403\" />\r\n            <capabilities>\r\n                <capability name=\"Filter\" mode=\"Allow\" />\r\n                <capability name=\"Read\" mode=\"Allow\" />\r\n                <capability name=\"ChangePermissions\" mode=\"Deny\" />\r\n            </capabilities>\r\n        </granteeCapabilities>\r\n    </permissions>\r\n</tsRequest>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dub01.online.tableau.com/api/3.9/sites/2cf921cf-50a3-4e5a-9eda-faa35bb153f6/views/3fc4f739-9afd-467b-9faa-8f3ff66c570a/permissions",
+					"protocol": "https",
+					"host": [
+						"dub01",
+						"online",
+						"tableau",
+						"com"
+					],
+					"path": [
+						"api",
+						"3.9",
+						"sites",
+						"2cf921cf-50a3-4e5a-9eda-faa35bb153f6",
+						"views",
+						"3fc4f739-9afd-467b-9faa-8f3ff66c570a",
+						"permissions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "image of view",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Tableau-Auth",
+						"value": "TPq_ukhTQi2J8nVrAN7rxA|DxRdlDNj3o8rz4f5mZT7aATfShMdoQc2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://dub01.online.tableau.com/api/3.9/sites/2cf921cf-50a3-4e5a-9eda-faa35bb153f6/views/3fc4f739-9afd-467b-9faa-8f3ff66c570a/image?Id=2",
+					"protocol": "https",
+					"host": [
+						"dub01",
+						"online",
+						"tableau",
+						"com"
+					],
+					"path": [
+						"api",
+						"3.9",
+						"sites",
+						"2cf921cf-50a3-4e5a-9eda-faa35bb153f6",
+						"views",
+						"3fc4f739-9afd-467b-9faa-8f3ff66c570a",
+						"image"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
